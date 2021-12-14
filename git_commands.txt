@@ -1,0 +1,24 @@
+
+
+Git auf eigener Maschine installieren Mac/Windows/Linux:
+https://git-scm.com/book/en/v2/Getting-Started-Installing-Git 
+
+Um das Repository zu clonen, öffnet in eurem Editor (nach Installation von Git) ein Terminal und fügt folgendes ein:
+git clone https://github.com/lisaagar/Modul-IR3.git
+
+
+Eigene Änderungen hochladen:
+(0. Bevor git benutzt werden kann, muss die eigene email/der eigene Benutzername auf eurem Rechner hinterlegt werden, hierzu folgende 2 Kommandos im Terminal ausführen:
+    git config --global user.email "eureemail@example.com"
+    git config --global user.name "EuerBenutzername")
+1. In Ordner Modul-IR3 wechseln
+2. Dateien anlegen und Code verfassen
+2. Pullen der aktuellen Version des Repositories (wichtig vor einem push IMMER zu pullen, da es sonst zu Konflikten kommen könnte und möglicherweise Fortschritte verloren gehen)
+        git pull
+3. Eigene Dateien zum Commit/Push hinzufügen
+        git add *
+4. Dateien commiten (Dateien werden auf dem eigenen Computer dem Repository hinzugefügt. Die Nachricht nach "-m" sehen dann auch die anderen Mitglieder nach dem push)
+        git commit -m "Beschreibung dessen was commited wird"
+5. Push (Dateien werden auf das remote Repository, auf das dann auch die anderen Gruppenmitglieder zugreifen können, geladen)
+        git push
+    

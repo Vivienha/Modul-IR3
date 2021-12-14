@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Evaluierung von Informationssystemen</title>
+    <meta name="author" content="Gruppe 4">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<!-- Nav Menü im Hearder. Modul Name und Hauptmenü--> 
+<nav class="navbar">
+    <div class="container mt-3">
+        <div class="brand-title"><b>SELiM - Evaluierung IR</b></div> 
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+            <li><a href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/index.php">Startseite</a>
+            </li>
+            </li>
+            <li><a href="#">Mein Profil</a></li>
+            
+            <div class="dropdown">
+                <li><a class="dropbtn" onclick="myFunction()" href="#">Selim-Module</a>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="https://www.uni-hildesheim.de/selim/Modul_GDI/GDI_Einstieg.php">Grundbegriffe IW</a>
+                  <a href="https://www.uni-hildesheim.de/selim/Modul_IR/IR_1_bekog_SELIM/inhalt.php">Information Retrieval 1</a>
+                  <a href="https://www.uni-hildesheim.de/selim/Modul_IR/IR_2_bekog_SELIM/r_inhalt.php">Information Retrieval 2</a>
+                  <a href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/module/evaIR/inhalt_eva.php">Evaluierung von IR Systemen</a>
+                  <a href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/module/fis/inhalt_fis.php">Fakteninformationssysteme</a>
+                  <a href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/module/mue/inhalt_mue.php">Maschinelle Übersetzung</a>
+                </div>
+                </li>
+              </div>
+            <li><a href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/glossar/glossar.php">Glossar</a></li>
+            <li><a href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/formelsammlung/formelsammlung.php">Formelsammlung</a></li>
+</nav>      
+    
+
+<!-- Content mit Lerninhalten oder Aufgabentyp-->
+<content>
+    <h2><b>Standardmaß "Recall"</b></h2>
+    <br>
+    <p>Die Fähigkeit eines Systems, relevante Dokumente zu liefern, wird als recall bezeichnet (wie viele der relevanten Dokumente sind gefunden?). Recall steht für das Verhältnis der relevanten Dokumente, die das System ermittelt hat (<b style="color: green;">a</b>) zu allen relevanten Dokumenten einer Dokumentmenge (<a href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/formelsammlung/formelsammlung.php"><b style="color: green">a</b> + <b style="color: orange">c</b></a>). Als Formel ausgedrückt bedeutet das:</p>
+    <img src="recall.jpg" alt= "Recall Formel">
+    <br>
+    <br>
+    <h5>Wichtig für den Recall</h5> 
+    <p>Bei der Berechnung des recall ist der Elementarparameter c in der Regel unbekannt und muss geschätzt werden (z. B. mit der Pooling-Methode). 
+        Bei sehr großen Ergebnismengen ist es nicht immer möglich, a genau zu bestimmen, da nicht alle Dokumente gesichtet werden können. Daher wird die Ergebnismenge häufig 'abgeschnitten' (cut off).
+        Wertebereich: 0 bis 1; ein guter Wert ist 1, ein schlechter Wert ist 0.
+        Idealerweise sollte das System alle relevanten Dokumente finden. Dieses Ziel ist allerdings unrealistisch. Ein guter Wert für ein System liegt bei 60 %.
+        Recall alleine berücksichtigt den Ballast nicht, den die Antwortmenge enthält. Deshalb muss der Precision-Wert miteinbezogen werden. Zu diesem Zweck versucht man, die beiden Maße zu koordinieren.
+        Bei Ranking-Systemen sagt recall nichts darüber aus, wie gut das System die Dokumente sortiert hat. 
+    </p>   
+    <br>
+    <button type="button"><a href="recalltest.html">Teste Dich!</a></button>
+</content>    
+
+<!-- Section mit Bild, Video, Grafik etc. -->
+<section>
+    <img src="Effektivität Recall.jpg" alt= "Effektivität Recall">
+    <div class="navigation-btn"> 
+    <button typ="button"><a href="#">Nächste Seite ></a></button></div>
+</section>  
+    
+
+<!-- Footer mit Navbar-->
+<footer>
+    <p1>©2021-2022 <a href="https://www.uni-hildesheim.de/" style="color: #45aa8c;"> Stiftung Universität Hildesheim</a></p1>   
+</footer>   
+</body>
